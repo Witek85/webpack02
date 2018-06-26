@@ -10,10 +10,13 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
-    watch: true,
     devtool: 'source-map',
     resolve: {
         extensions: ['.js', '.jsx']
+    },
+    devServer: {
+        port: 8000,
+        contentBase: path.join(__dirname, 'dist')
     },
     module: {
         rules: [
@@ -100,7 +103,7 @@ module.exports = {
         new CleanPlugin('dist'),
         new ExtractTextPlugin('css/style.css'),
         new HTMLPlugin({
-            filename: 'app.html',
+            filename: 'index.html',
             template: './src/template.html',
         })
     ]
