@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Timer from './Timer';
-import './App.scss';
+import style from './App.scss';
 
 const App = () => (
-    <div>
+    <div className={style.border}>
         <Timer />
     </div>
 )
