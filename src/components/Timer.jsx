@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Timer.scss';
+
 const Timer = () => (
     <div>
         <span>13</span>:
